@@ -15,5 +15,5 @@
     $result->images = $images;
     $json = json_encode($result);
     echo $json;
-    // header('Content-Type: application/json');
+    header('Content-Type: application/json');
 ?>
