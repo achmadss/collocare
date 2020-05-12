@@ -14,6 +14,7 @@
             array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$i."/".basename($file));
         }
         sort($images,SORT_NATURAL);
+        $chapter = null;
         $chapter->chapter = "".$i;
         $chapter->images = $images;
         array_push($chapters, $chapter);
