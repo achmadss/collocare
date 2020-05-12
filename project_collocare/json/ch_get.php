@@ -9,7 +9,7 @@
     //     array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$chapter."/".basename($file));
     // }
 
-    foreach(glob("../chapters/chapter/*.*") as $file) {
+    foreach(glob("../chapters/*.*") as $file) {
         array_push($images, $file);
     }
     sort($images,SORT_NATURAL);
