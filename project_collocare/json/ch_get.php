@@ -1,5 +1,7 @@
 <?php
     $chapter = $_GET["ch"];
+    $total_items  = count(glob("../chapters/*", GLOB_ONLYDIR));
+    $result->NUMBER_OF_CHAPTERS = $total_items;
     $result->chapter = $chapter;
     $images = array();
     foreach(glob("../chapters/chapter".$chapter."/*.*") as $file) {
