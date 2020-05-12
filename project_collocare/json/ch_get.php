@@ -4,20 +4,28 @@
     $result->NUMBER_OF_CHAPTERS = $total_items;
     // $result->chapter = $chapter;
     
-    $images = array();
+    
     // foreach(glob("../chapters/chapter".$chapter."/*.*") as $file) {
     //     array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$chapter."/".basename($file));
     // }
-
-    foreach(glob("../chapters/*.*") as $file) {
-        array_push($images, $file);
+    for ($i=1; $i < $total_items+1; $i++) { 
+        $chapters = array();
+        foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
+            $images = array();
+            array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$i."/".basename($file));
+        }
+        array_push($chapter, "".$i);
+        array_push($chapter, $images);
     }
+
+ 
+    
     sort($images,SORT_NATURAL);
     // $sorted_images = array();
     // foreach($sorted_images as $image) {
     //     array_push($sorted_images, $image);
     // }
-    $result->images = $images;
+    $result->chapters = $chapters;
     $json = json_encode($result);
     echo $json;
     header('Content-Type: application/json');
