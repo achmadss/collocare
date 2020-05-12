@@ -1,0 +1,27 @@
+<html>
+    <h1>ASSETS FOR COLLOCARE</h1>
+    <input type="file" name="file" id="inputAssets" multiple="multiple">
+    <div id="assets"></div>
+
+    <script>
+        var file = document.getElementById("inputAssets");
+        file.onchange = function() {
+            if(file.files.length > 0) {
+                var totalFileSize = 0;
+                for(var i=0; i < file.files.length; i++) {
+                    var aset = document.getElementById("assets");
+                    var no = i+1;
+                    var filesize = Math.round(file.files.item(i).size / 1024);
+                    totalFileSize += filesize;
+                    aset.innerHTML += "<br>"+no+". "+file.files.item(i).name+" --> "+filesize+" KB";
+                }
+                aset.innerHTML += "<br><br>Total Files = "
+                    +file.files.length
+                    +"<br>Total Size = "+totalFileSize+" KB";
+                
+            }
+            
+        };
+    </script>
+
+</html>
