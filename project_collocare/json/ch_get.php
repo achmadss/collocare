@@ -12,7 +12,7 @@
         $images = array();
         $dir = "";
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
-            $dir = __DIR__;
+            $dir = "../".__DIR__;
             array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$i."/".basename($file));
         }
         sort($images,SORT_NATURAL);
