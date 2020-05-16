@@ -6,8 +6,13 @@
 
     echo $title+"<br>";
 
-    foreach ($_FILES["inputAssets"]["name"] as $file) {
-        echo $file+"<br>";
+    if(count($_FILES['uploads']['inputAssets'])) {
+        foreach ($_FILES['uploads']['inputAssets'] as $file) {
+            
+            //do your upload stuff here
+            echo $file;
+            
+        }
     }
 
 ?>
