@@ -2,10 +2,10 @@
     <h1>ASSETS FOR COLLOCARE</h1>
     <p>Chapter Name <input type="text"></p>
     <p><input type="file" name="file" id="inputAssets" multiple="multiple"></p>
-    <table id="assets" style="border: 1px; padding: 2px;">
+    <table id="assets" style="border: 5pt; padding: 5pt;">
 
     </table>
-    <br>
+
     <div id="total"></div>
     
 
@@ -22,9 +22,9 @@
                     aset.innerHTML += "<tr><td>"+no+".</td><td>"+file.files.item(i).name+"</td><td>"+filesize+" KB</td></tr>";
                 }
                 var total = document.getElementById("total");
-                total.innerHTML += "<tr><td>Total Files = "
+                total.innerHTML += "<br>Total Files = "
                     +file.files.length
-                    +"</td></tr><tr><td>Total Size = "+totalFileSize+" KB</td></tr>";
+                    +"<br>Total Size = "+totalFileSize+" KB";
                 
             }
             
