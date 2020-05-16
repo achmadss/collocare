@@ -16,8 +16,9 @@
     file.onchange = function () {
         if (file.files.length > 0) {
             var totalFileSize = 0;
+            var aset = document.getElementById("assets");
+            aset.innerHTML = "";
             for (var i = 0; i < file.files.length; i++) {
-                var aset = document.getElementById("assets");
                 var no = i + 1;
                 var filesize = Math.round(file.files.item(i).size / 1024);
                 totalFileSize += filesize;
