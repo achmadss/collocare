@@ -36,5 +36,4 @@
     $result->chapters = $chapters;
     $json = json_encode($result);
     echo $json;
-    // header('Content-Type: application/json');
 ?>
