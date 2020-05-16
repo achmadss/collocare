@@ -10,7 +10,10 @@
     $chapters = array();
     for ($i=1; $i < $total_items+1; $i++) { 
         $images = array();
-        // $dir = dirname(__DIR__, 1);
+        $dir = array();
+        foreach (glob("../chapters/*", GLOB_ONLYDIR) as $value) {
+            array_push($dir, $file);
+        }
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
             
             array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$i."/".basename($file));
@@ -18,7 +21,7 @@
         sort($images,SORT_NATURAL);
         $chapter = null;
         $chapter->chapter = "".$i;
-        // $chapter->directory = $dir;
+        $chapter->directory = $dir;
         $chapter->images = $images;
         array_push($chapters, $chapter);
     }
