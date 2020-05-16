@@ -22,11 +22,11 @@
                     var no = i+1;
                     var filesize = Math.round(file.files.item(i).size / 1024);
                     totalFileSize += filesize;
-                    aset.innerHTML += "<tr><td>"+no+"</td><td>"+file.files.item(i).name+"</td><td>"+filesize+" KB</td></tr>";
+                    aset.innerHTML += "<tr><td>"+no+".</td><td>"+file.files.item(i).name+"</td><td>"+filesize+" KB</td></tr>";
                 }
-                aset.innerHTML += "<tr>Total Files = "
+                aset.innerHTML += "<tr><td>Total Files = "
                     +file.files.length
-                    +"</tr><tr>Total Size = "+totalFileSize+" KB</tr>";
+                    +"</td></tr><tr><td>Total Size = "+totalFileSize+" KB</td></tr>";
                 
             }
             
