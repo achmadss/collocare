@@ -11,8 +11,10 @@
     for ($i=1; $i < $total_items+1; $i++) { 
         $images = array();
         $dir = array();
-        foreach (glob("../chapters/*", GLOB_ONLYDIR) as $value) {
-            array_push($dir, $file);
+        $path = realpath("../chapters/");
+        $objects = new RecursiveDirectoryIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
+        foreach ($objects as $value) {
+            array_push($value);
         }
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
             
