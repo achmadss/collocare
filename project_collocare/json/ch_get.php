@@ -11,11 +11,10 @@
     for ($i=1; $i < $total_items+1; $i++) { 
         $images = array();
         $dir = array();
-        // $path = realpath("../chapters/");
-        // $objects = new RecursiveDirectoryIterator(new RecursiveDirectoryIterator($path), RecursiveIteratorIterator::SELF_FIRST);
-        // foreach ($objects as $value) {
-        //     array_push($value);
-        // }
+        $path = "../chapters/";
+        foreach(glob($path."*", GLOB_ONLYDIR) as $folders) {
+            array_push($dir, $folders);
+        }
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
             
             array_push($images, "http://collocare.herokuapp.com/project_collocare/chapters/chapter".$i."/".basename($file));
