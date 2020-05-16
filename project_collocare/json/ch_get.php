@@ -11,7 +11,7 @@
     for ($i=1; $i < $total_items+1; $i++) { 
         $images = array();
         $dir = array();
-        $path = "../chapters/";
+        $path = realpath("../chapters/");
         foreach(glob($path."*", GLOB_ONLYDIR) as $folders) {
             array_push($dir, $folders);
         }
