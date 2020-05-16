@@ -1,9 +1,8 @@
 <?php
-    $total_items  = count(glob("../chapters/*", GLOB_ONLYDIR));
-    $result->NUMBER_OF_CHAPTERS = $total_items;
-    // $chapters = array();
-    // $result->chapters = $chapters;
-    $json = json_encode($result);
-    echo $json;
-    header('Content-Type: application/json');
+    $title = $_GET["title"];
+    $target_dir = "../chapters/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+    echo $title+"<br>"+$target_file;
+
 ?>

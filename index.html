@@ -1,34 +1,35 @@
 <html>
-    <h1>ASSETS FOR COLLOCARE</h1>
-    <p>Chapter Name <input type="text"></p>
+<h1>ASSETS FOR COLLOCARE</h1>
+<form action="project_collocare/json/ch_count.php" method="get" enctype="multipart/form-data">
+    <p>Chapter Name <input type="text" id="title"></p>
     <p><input type="file" name="file" id="inputAssets" multiple="multiple"></p>
-    <table id="assets" style="border: 5pt; padding: 5pt;">
-
+    <table id="assets">
     </table>
-
     <div id="total"></div>
-    
+    <input type="submit" value="Upload" name="submit">
+</form>
 
-    <script>
-        var file = document.getElementById("inputAssets");
-        file.onchange = function() {
-            if(file.files.length > 0) {
-                var totalFileSize = 0;
-                for(var i=0; i < file.files.length; i++) {
-                    var aset = document.getElementById("assets");
-                    var no = i+1;
-                    var filesize = Math.round(file.files.item(i).size / 1024);
-                    totalFileSize += filesize;
-                    aset.innerHTML += "<tr><td>"+no+".</td><td>"+file.files.item(i).name+"</td><td>"+filesize+" KB</td></tr>";
-                }
-                var total = document.getElementById("total");
-                total.innerHTML += "<br>Total Files = "
-                    +file.files.length
-                    +"<br>Total Size = "+totalFileSize+" KB";
-                
+
+<script>
+    var file = document.getElementById("inputAssets");
+    file.onchange = function () {
+        if (file.files.length > 0) {
+            var totalFileSize = 0;
+            for (var i = 0; i < file.files.length; i++) {
+                var aset = document.getElementById("assets");
+                var no = i + 1;
+                var filesize = Math.round(file.files.item(i).size / 1024);
+                totalFileSize += filesize;
+                aset.innerHTML += "<tr><td>" + no + ".</td><td>" + file.files.item(i).name + "</td><td>" + filesize + " KB</td></tr>";
             }
-            
-        };
-    </script>
+            var total = document.getElementById("total");
+            total.innerHTML += "<br>Total Files = "
+                + file.files.length
+                + "<br>Total Size = " + totalFileSize + " KB";
+
+        }
+
+    };
+</script>
 
 </html>
