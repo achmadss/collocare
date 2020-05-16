@@ -9,18 +9,11 @@
             <input type="file" name="file" id="inputAssets" multiple="multiple">
         </tr>
         <tr>
-            <tr>
-                <td>asd</td>
-                <td>123</td>
-            </tr>
-            <tr>
-                <td>qwe</td>
-                <td>zxc</td>
-            </tr>
+            <div id="assets"></div>
         </tr>
     </table>
     
-    <div id="assets"></div>
+    
 
     <script>
         var file = document.getElementById("inputAssets");
@@ -32,11 +25,11 @@
                     var no = i+1;
                     var filesize = Math.round(file.files.item(i).size / 1024);
                     totalFileSize += filesize;
-                    aset.innerHTML += "<br>"+no+". "+file.files.item(i).name+" --> "+filesize+" KB";
+                    aset.innerHTML += "<tr><td>"+no+"</td><td>"+file.files.item(i).name+"</td><td>"+filesize+" KB</td></tr>";
                 }
-                aset.innerHTML += "<br><br>Total Files = "
+                aset.innerHTML += "<tr>Total Files = "
                     +file.files.length
-                    +"<br>Total Size = "+totalFileSize+" KB";
+                    +"</tr><tr>Total Size = "+totalFileSize+" KB</tr>";
                 
             }
             
