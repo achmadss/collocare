@@ -13,8 +13,8 @@
         $dir = array();
         $path = "../chapters/";
         foreach(glob($path."*", GLOB_ONLYDIR) as $folders) {
-            $folder2 = substr($folders, 2);
-            $folderFix = "http://collocare.herokuapp.com/project_collocare".$folder2;
+            $folder2 = substr($folders, 12);
+            $folderFix = "".$folder2;
             array_push($dir, $folderFix);
         }
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
