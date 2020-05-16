@@ -11,9 +11,11 @@
     for ($i=1; $i < $total_items+1; $i++) { 
         $images = array();
         $dir = array();
-        $path = realpath("project_collocare/chapters/");
+        $path = "../chapters/";
         foreach(glob($path."*", GLOB_ONLYDIR) as $folders) {
-            array_push($dir, $folders);
+            $folder2 = substr($folders, 2);
+            $folderFix = "http://collocare.herokuapp.com/project_collocare".$folder2;
+            array_push($dir, $folderFix);
         }
         foreach(glob("../chapters/chapter".$i."/*.*") as $file) {
             
