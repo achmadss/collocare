@@ -3,7 +3,7 @@
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
-        mkdir("project_collocare/chapters/"+$title, 0700);
+        mkdir("project_collocare/chapters/"+$title);
     }
     print_r(error_get_last());
     // if(count($_FILES['uploads']['inputAssets'])) {
