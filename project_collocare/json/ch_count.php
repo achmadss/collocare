@@ -1,6 +1,6 @@
 <?php
     error_reporting(1);
-    // $title = $_GET["title"];
+    $title = $_POST["title"];
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
