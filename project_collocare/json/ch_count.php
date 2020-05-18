@@ -4,19 +4,7 @@
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
-        echo $title;
-        for ($i = 0; $i < $fileCount; $i++) {
-            ?>
-                <p>File #<?= $i+1 ?>:</p>
-                <p>
-                    Name: <?= $myFile["name"][$i] ?><br>
-                    Temporary file: <?= $myFile["tmp_name"][$i] ?><br>
-                    Type: <?= $myFile["type"][$i] ?><br>
-                    Size: <?= $myFile["size"][$i] ?><br>
-                    Error: <?= $myFile["error"][$i] ?><br>
-                </p>
-            <?php
-        }
+        mkdir("project_collocare/chapters/"+$title, 0700);
     }
 
     // if(count($_FILES['uploads']['inputAssets'])) {
