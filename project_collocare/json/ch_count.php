@@ -7,7 +7,7 @@
         mkdir($dir);
         for($i = 0; $i < $fileCount; $i++) {
             $temp = $myFile["tmp_name"][$i];
-            $newDir = $dir . $myFile["name"][$i];
+            $newDir = $dir . "/" . $myFile["name"][$i];
             move_uploaded_file($temp, $newDir);
         }
     }
