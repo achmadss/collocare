@@ -4,7 +4,7 @@
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
-        mkdir($title+"");
+        echo $title;
         for ($i = 0; $i < $fileCount; $i++) {
             ?>
                 <p>File #<?= $i+1 ?>:</p>
