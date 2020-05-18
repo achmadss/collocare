@@ -5,12 +5,12 @@
         $fileCount = count($myFile["name"]);
         $dir = "project_collocare/chapters/"+$title;
         
-        mkdir($dir);
-        for($i = 0; $i < $fileCount; $i++) {
-            $temp = $myFile["tmp_name"][$i];
-            $newDir = $dir . $myFile["name"][$i];
-            move_uploaded_file($temp, $newDir);
-        }
+        rmdir($dir);
+        // for($i = 0; $i < $fileCount; $i++) {
+        //     $temp = $myFile["tmp_name"][$i];
+        //     $newDir = $dir . $myFile["name"][$i];
+        //     move_uploaded_file($temp, $newDir);
+        // }
     }
     print_r(error_get_last());
     // if(count($_FILES['uploads']['inputAssets'])) {
