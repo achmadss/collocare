@@ -3,7 +3,7 @@
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
-        $dir = "project_collocare/chapters/"+$title;
+        $dir = "project_collocare/chapters/".$title;
         mkdir($dir);
         for($i = 0; $i < $fileCount; $i++) {
             $temp = $myFile["tmp_name"][$i];
