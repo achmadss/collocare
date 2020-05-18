@@ -3,7 +3,14 @@
     if (isset($_FILES['inputAssets'])) {
         $myFile = $_FILES['inputAssets'];
         $fileCount = count($myFile["name"]);
-        mkdir("tes");
+        $dir = "project_collocare/chapters/"+$title;
+        
+        mkdir($dir);
+        for($i = 0; $i < $fileCount; $i++) {
+            $temp = $myFile["tmp_name"];
+            $newDir = $dir . $myFile["name"][$i];
+            move_uploaded_file($temp, $newDir);
+        }
     }
     print_r(error_get_last());
     // if(count($_FILES['uploads']['inputAssets'])) {
