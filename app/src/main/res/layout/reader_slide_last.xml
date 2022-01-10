@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020">
+
+    <TextView
+        android:id="@+id/end_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="End of chapter "
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/custom_button"
+        android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+        android:drawablePadding="10dp"
+        android:paddingVertical="15dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="40dp"
+        android:text="Next Chapter"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="575dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button"
+        android:drawableRight="@drawable/ic_close_white_24dp"
+        android:drawablePadding="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="40dp"
+        android:paddingVertical="15dp"
+        android:text="Close Viewer"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

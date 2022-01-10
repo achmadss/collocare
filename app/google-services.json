@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "908174825559",
+    "firebase_url": "https://collocare-17470.firebaseio.com",
+    "project_id": "collocare-17470",
+    "storage_bucket": "collocare-17470.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908174825559:android:0c63a19883700aff9aab12",
+        "android_client_info": {
+          "package_name": "com.susiapp.collocare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908174825559-n751jp4vbd20k5fpkvf036agne6bgjda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZeCH8NvXBEx32m9JPRggjiIsChA-D9yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908174825559-n751jp4vbd20k5fpkvf036agne6bgjda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
